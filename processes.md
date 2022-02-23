@@ -7,6 +7,7 @@ Basically a processes could be everything running in your machine, an app, a com
 
 
 #### See all the process sorted on the biggest for smallest
+
 ```bash
 top
 ```
