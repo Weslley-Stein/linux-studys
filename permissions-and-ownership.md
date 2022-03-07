@@ -12,8 +12,6 @@ on chmod, we first define permission for the Owner, them for users from the same
 chmod 777 file #Setting permisions of Reading, Writing and Execution for the Owner, any user of his group and anyone on the system.
 ```
 
-We set Read, Write and Execute permission for the owner, others and all.
-
 ### Chmod Ugoa
 
 **Target of Permission**
