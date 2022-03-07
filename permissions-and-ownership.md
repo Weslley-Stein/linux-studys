@@ -43,7 +43,7 @@ Chown command is used to change the owner and group of a file or dir, we need to
 chown user:group file
 ```
 
-Chgrp is quite similar, the only difference him and Chown, its about the fact he can just change the group of the file, look:
+Chgrp is quite similar, the only difference between him and Chown, its about the fact he can just change the group of the file, look:
 ```bash
 chgrp group file
 ```
