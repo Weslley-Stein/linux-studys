@@ -6,7 +6,7 @@ On linux we have 3 types of permission, Read, Write and Execute which we can spe
 
 Assume: Read = 4, Write = 2, Execute = 1, now, if you want to make a file Readable and Executable you need to sum 4 + 1, which is 5, keep that idea
 
-on chmod, we first define permission for the Owner, them for the others(user from the same group of the owner) and all(any user on the system),**Full Example:**
+on chmod, we first define permission for the Owner, them for users from the same group of the owner, and all(any user on the system),**Full Example:**
 
 ```bash
 chmod 777 file #Setting permisions of Reading, Writing and Execution for the Owner, any user of his group and anyone on the system.
