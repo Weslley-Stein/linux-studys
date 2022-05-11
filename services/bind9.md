@@ -56,5 +56,5 @@
 	> subnet 0.0.0.0 netmask 0.0.0.0 {
 	>	range 0.0.0.0 0.0.0.0;
 	>	option subnet-mask 0.0.0.0;
-	>	option '
+	>	option 
 

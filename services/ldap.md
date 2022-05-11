@@ -51,3 +51,10 @@ objectClass: posixGroup
 group: email
 
 ```
+
+### Automatic home dir on login
+```
+vim /etc/pam.d/login
+> session required pam_mkhomedir.so skel=/etc/skel umask=0077
+> :wq
+```
