@@ -28,3 +28,33 @@
 	```
 - /etc/bind/namef.conf.options :
 - /etc/bind/db.<something> :
+
+### DDNS
+- ddns-confgen -k <key> > dhcp.key
+- vim /etc/bind/named.conf.local
+	> zone "domain" {
+	> 	type master;
+	>	file "/etc/bind/your_zone";
+	>	update-policy {
+	>		grant <key> wildcard *.<your_domain> A DHCID;
+	>	};
+	>};
+	>zone "reverse_domain" {
+	>	type master;
+	>	file "/etc/bind/reverse_zone";
+	>	update-policy {
+	>		grant <key> wildcard *.<your_domain> PTR;
+	>	};
+	>};
+- cp /etc/bind/dhcp.key /etc/dhcp/
+- vim /etc/dhcp/dhcpd.conf
+	> option domain-name "your_domain";
+	> option domain-name-servers "ip_or_nameserver";
+	> ddns_updates on;
+	> ddns_update_style standard;
+	> authoritative;
+	> subnet 0.0.0.0 netmask 0.0.0.0 {
+	>	range 0.0.0.0 0.0.0.0;
+	>	option subnet-mask 0.0.0.0;
+	>	option '
+
